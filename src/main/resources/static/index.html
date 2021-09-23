@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blueprints</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="/webjars/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+          href="/webjars/bootstrap/4.1.2/css/bootstrap.min.css" />
+    <script src="js/apimock.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="box">
+    <h1 class="text-left text-light font-weight-bold">Blueprints</h1>
+    <div class="card card-sm">
+        <div class="card-body row no-gutters align-items-center">
+            <label id="author">Autor</label>
+            <input>
+            <button>Get Blueprints</button>
+        </div>
+    </div>
+    <div class="container">
+    <div class="row">
+        <label></label>
+        <div class="col">
+            <div class="overflow-auto mh-60" style="height:350px;">
+                <table id="table" class="table table-secondary">
+                    <thead>
+                        <tr>
+                            <th scope="col" data-field="Blueprint name">Blueprint name</th>
+                            <th scope="col" data-field="Number of Points">Number of Points</th>
+                            <th scope="col" data-field="Open">Open</th>
+                        </tr>
+                    </thead>
+                    <tbody id="body" style="overflow-y: scroll;"></tbody>
+                </table>
+            </div>
+        </div>
+        <p>Total user of points:</p>
+        <div class="col">
+            <p>Current Blueprint:</p>
+        </div>
+    </div>
+
+    </div>
+</div>
+</body>
+</html>
