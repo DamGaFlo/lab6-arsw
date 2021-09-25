@@ -1,10 +1,12 @@
+body{
+    font-family: sans-serif;
+}
 box{
     justify-content: center;
 }
 .container{
-    margin-top: 30px;
-    margin-bottom: 40px;
-    padding: 40px 0px;
+    margin: 30px  20px;
+    padding: 0px 15px;
     border-radius: 15px;
     background-color: #15638f;
     box-shadow: 3px 3px 9px 3px #000;
@@ -13,7 +15,8 @@ box{
     color:#fff;
 }
 .card{
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 5px 5px 15px 5px #000;
     background-color: #4a568a;
+    margin: 20px;
 }

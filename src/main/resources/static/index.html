@@ -2,32 +2,35 @@
 <html>
 <head>
     <title>Blueprints</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="/webjars/jquery/3.1.0/jquery.min.js"></script>
-    <script src="/webjars/bootstrap/4.1.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet"
-          href="/webjars/bootstrap/4.1.2/css/bootstrap.min.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/apimock.js"></script>
     <script src="js/app.js"></script>
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body background="img/bg-blueprint.jpg">
 <div class="box">
-    <h1 class="text-left text-light font-weight-bold">Blueprints</h1>
-    <div class="card card-sm">
+    <h1 class="text-left text-light font-weight-bold ml-3 mt-3">Blueprints</h1>
+    <div class="card card-sm" style="width: 25rem;">
         <div class="card-body row no-gutters align-items-center">
-            <label id="author">Autor</label>
-            <input>
-            <button>Get Blueprints</button>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Author</span>
+                </div>
+                <input type="text" class="form-control" id="autor">
+                <button  class="btn btn-primary" id="Get blueprints" onclick="app.plansAuthor()"> Get Blueprints</button>
+            </div>
         </div>
     </div>
     <div class="container">
     <div class="row">
-        <label></label>
-        <div class="col">
-            <div class="overflow-auto mh-60" style="height:350px;">
+        <div class="col card card-sm pt-3">
+            <h5><label id="autorLabel"></label>'s Blueprints</h5>
+            <div class="overflow-auto mh-60" style="height:250px;">
                 <table id="table" class="table table-secondary">
                     <thead>
                         <tr>
@@ -39,13 +42,12 @@
                     <tbody id="body" style="overflow-y: scroll;"></tbody>
                 </table>
             </div>
+            <h5>Total user points:<label id="puntosLabel"></label></h5>
         </div>
-        <p>Total user of points:</p>
-        <div class="col">
-            <p>Current Blueprint:</p>
+        <div class="col card card-sm pt-3">
+            <h5>Current Blueprint:</h5>
         </div>
     </div>
-
     </div>
 </div>
 </body>
