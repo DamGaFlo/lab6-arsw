@@ -10,6 +10,8 @@ import edu.eci.arsw.blueprints.model.Point;
 import edu.eci.arsw.blueprints.persistence.BlueprintNotFoundException;
 import edu.eci.arsw.blueprints.persistence.BlueprintPersistenceException;
 import edu.eci.arsw.blueprints.persistence.BlueprintsPersistence;
+
+import java.sql.SQLOutput;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -95,6 +97,15 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
         }
         else{
             return bluePrintReturn;
+        }
+    }
+
+    @Override
+    public void deleteBlueprint(String author, String name) throws BlueprintNotFoundException {
+
+        Blueprint blueprint = blueprints.remove(new Tuple<>(author,name));
+        if (blueprint==null){
+            throw new BlueprintNotFoundException("no existe este bluePrint");
         }
     }
 

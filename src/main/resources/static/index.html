@@ -46,11 +46,18 @@
             <h5>Total user points:<label id="puntosLabel"></label></h5>
         </div>
         <div class="col card card-sm pt-3">
+            <button class="btn btn-success" id="create" onclick="app.onclickCreate()"> Create </button>
             <h5>Current Blueprint:</h5>
-            <canvas id="canvas" height="100px" width="100px" style="border:5px solid #e8e109"></canvas>
+
+            <canvas id="canvas" height="500" width="500" style="border:5px solid #e8e109"></canvas>
+            <div class="btn-group">
+                <button class="btn btn-primary" id="save" onclick=""> Save/update </button>
+                <button class="btn btn-danger" id="delete" onclick=""> Delete </button>
+            </div>
         </div>
     </div>
     </div>
 </div>
+
 </body>
 </html>
